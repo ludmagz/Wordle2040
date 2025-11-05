@@ -34,12 +34,10 @@ void draw_menu_principal () {
   tft.setCursor(25, 85);
   tft.println("START para jogar");
 
-  tft.drawRect(10, 140, 40, 40, ILI9341_WHITE);
-  tft.drawRect(55, 140, 40, 40, ILI9341_WHITE);
-  tft.drawRect(100, 140, 40, 40, ILI9341_WHITE);
-  tft.drawRect(145, 140, 40, 40, ILI9341_WHITE);
-  tft.drawRect(190, 140, 40, 40, ILI9341_WHITE);
-
+  // desenha 5 quadrados
+  for (int j = 0; j < 5; j++){
+      tft.drawRect((10 + (45 * j)), 140, 40, 40, ILI9341_WHITE);
+    }
 
   tft.setTextSize(1);
   tft.setCursor(67, 300);
@@ -52,48 +50,12 @@ void draw_tela_game () {
   // Defina as propriedades de texto
   tft.setTextColor(ILI9341_WHITE);
 
-  // tentativa 1
-  tft.drawRect(10, 5, 40, 40, ILI9341_WHITE);
-  tft.drawRect(55, 5, 40, 40, ILI9341_WHITE);
-  tft.drawRect(100, 5, 40, 40, ILI9341_WHITE);
-  tft.drawRect(145, 5, 40, 40, ILI9341_WHITE);
-  tft.drawRect(190, 5, 40, 40, ILI9341_WHITE);
-
-  // tentativa 2
-  tft.drawRect(10, 50, 40, 40, ILI9341_WHITE);
-  tft.drawRect(55, 50, 40, 40, ILI9341_WHITE);
-  tft.drawRect(100, 50, 40, 40, ILI9341_WHITE);
-  tft.drawRect(145, 50, 40, 40, ILI9341_WHITE);
-  tft.drawRect(190, 50, 40, 40, ILI9341_WHITE);
-
-  // tentativa 3
-  tft.drawRect(10, 95, 40, 40, ILI9341_WHITE);
-  tft.drawRect(55, 95, 40, 40, ILI9341_WHITE);
-  tft.drawRect(100, 95, 40, 40, ILI9341_WHITE);
-  tft.drawRect(145, 95, 40, 40, ILI9341_WHITE);
-  tft.drawRect(190, 95, 40, 40, ILI9341_WHITE);
-
-  // tentativa 4
-  tft.drawRect(10, 140, 40, 40, ILI9341_WHITE);
-  tft.drawRect(55, 140, 40, 40, ILI9341_WHITE);
-  tft.drawRect(100, 140, 40, 40, ILI9341_WHITE);
-  tft.drawRect(145, 140, 40, 40, ILI9341_WHITE);
-  tft.drawRect(190, 140, 40, 40, ILI9341_WHITE);
-
-  // tentativa 5
-  tft.drawRect(10, 185, 40, 40, ILI9341_WHITE);
-  tft.drawRect(55, 185, 40, 40, ILI9341_WHITE);
-  tft.drawRect(100, 185, 40, 40, ILI9341_WHITE);
-  tft.drawRect(145, 185, 40, 40, ILI9341_WHITE);
-  tft.drawRect(190, 185, 40, 40, ILI9341_WHITE);
-
-  // tentativa 6
-  tft.drawRect(10, 230, 40, 40, ILI9341_WHITE);
-  tft.drawRect(55, 230, 40, 40, ILI9341_WHITE);
-  tft.drawRect(100, 230, 40, 40, ILI9341_WHITE);
-  tft.drawRect(145, 230, 40, 40, ILI9341_WHITE);
-  tft.drawRect(190, 230, 40, 40, ILI9341_WHITE);
-
+  // desenho de todos os 30 quadrados
+  for (int i = 0; i < 6; i++){
+    for (int j = 0; j < 5; j++){
+      tft.drawRect((10 + (45 * j)), (5 + (45 * i)), 40, 40, ILI9341_WHITE);
+    }
+  }
 
   tft.setTextSize(1);
   tft.setCursor(67, 300);
@@ -116,11 +78,9 @@ void draw_menu_end (bool win) {
   tft.setCursor(38, 110);
   tft.println("MENU para sair");
 
-  tft.drawRect(33, 160, 40, 40, ILI9341_WHITE);
-  tft.drawRect(78, 160, 40, 40, ILI9341_WHITE);
-  tft.drawRect(123, 160, 40, 40, ILI9341_WHITE);
-  tft.drawRect(168, 160, 40, 40, ILI9341_WHITE);
-
+  for (int j = 0; j < 4; j++){
+    tft.drawRect((33 + (45 * j)), 160, 40, 40, ILI9341_WHITE);
+  }
 
   tft.setTextSize(1);
   tft.setCursor(67, 300);
