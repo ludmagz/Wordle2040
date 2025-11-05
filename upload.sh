@@ -1,0 +1,1 @@
+cp ./.pio/build/pico/firmware.uf2 /media/mrs5/RPI-RP2
